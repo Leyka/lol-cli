@@ -1,12 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#define DEFAULT_NORMAL_MODE		0
-#define DEFAULT_SITE			"u.gg"
+#define DEFAULT_NORMAL_MODE     0
+#define DEFAULT_SITE            "u.gg"
 #define UGG                     "u.gg"
 #define OPGG                    "op.gg"
 
-#define MAX_URL_LENGTH			256
+#define MAX_URL_LENGTH          256
 #define MAX_CHAMPION_LENGTH     50
 
 void showUsage(char* programName);
