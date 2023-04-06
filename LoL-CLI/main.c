@@ -22,6 +22,11 @@ int main(int argc, char* argv[])
     }
 
     const char* champion = findChampion(maybeChampion);
+    if (champion == NULL)
+    {
+        fprintf(stderr, "Champion name is empty or not found");
+        return 1;
+    }
 
     char* url = parseUrlByArgs(champion, site, isNormalMode);
     launchBrowser(url);
