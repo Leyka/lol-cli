@@ -118,13 +118,13 @@ char* parseUrlByArgs(const char* champion, char* site, int isNormalMode)
 {
     char* url = malloc(MAX_URL_LENGTH);
     
-    if (strcmp(site, "u.gg") == 0)
+    if (strcmp(site, UGG) == 0)
     {
         isNormalMode == 1
             ? snprintf(url, MAX_URL_LENGTH, "https://u.gg/lol/champions/%s/build", champion)
             : snprintf(url, MAX_URL_LENGTH, "https://u.gg/lol/champions/aram/%s", champion);
     }
-    else if (strcmp(site, "op.gg") == 0)
+    else if (strcmp(site, OPGG) == 0)
     {
         isNormalMode == 1
             ? snprintf(url, MAX_URL_LENGTH, "https://op.gg/champions/%s", champion)
