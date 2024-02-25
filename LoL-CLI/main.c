@@ -87,20 +87,20 @@ void showUsage(char* programName)
 }
 
  
-const char* findChampion(char* maybeChampion)
+const char* findChampion(char* champion)
 {
-    if (maybeChampion == NULL)
+    if (champion == NULL)
     {
         return NULL;
     }
 
-    toLowerCase(maybeChampion);
+    toLowerCase(champion);
 
     int sizeChampions = sizeof(CHAMPIONS) / sizeof(CHAMPIONS[0]);
     for (int i = 0; i < sizeChampions; i++)
     {
         // Check if string contains substring
-        if (strstr(CHAMPIONS[i], maybeChampion) != NULL)
+        if (strstr(CHAMPIONS[i], champion) != NULL)
         {
             return CHAMPIONS[i];
         }
@@ -110,13 +110,13 @@ const char* findChampion(char* maybeChampion)
     int sizeAliases = sizeof(CHAMPION_ALIASES) / sizeof(CHAMPION_ALIASES[0]);
     for (int i = 0; i < sizeChampions; i++)
     {
-        if (strcmp(maybeChampion, CHAMPION_ALIASES[i].alias) == 0)
+        if (strcmp(champion, CHAMPION_ALIASES[i].alias) == 0)
         {
             return CHAMPION_ALIASES[i].name;
         }
     }
 
-    return maybeChampion;
+    return champion;
 }
 
 char* parseUrlByArgs(const char* champion, char* site, int isNormalMode)
